@@ -44,7 +44,7 @@ After publishing a new `dm-annotate` GitHub Release:
 2. Verify the release zip SHA256:
 
 ```sh
-VERSION="0.1.7"
+VERSION="0.1.8"
 tmpdir="$(mktemp -d)"
 gh release download "v${VERSION}" \
   --repo BradGroux/dm-annotate \
