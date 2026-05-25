@@ -13,6 +13,14 @@ brew install --cask dm-annotate
 
 `dm-annotate` / Digital Meld Annotate is a native, local-only macOS screen annotation tool.
 
+If Homebrew reports that `dm-annotate` exists in multiple taps, remove the retired app-repo tap:
+
+```sh
+brew reinstall --cask bradgroux/tap/dm-annotate
+brew untap --force BradGroux/dm-annotate
+brew install --cask dm-annotate
+```
+
 ### dm-lessonmeld
 
 ```sh
@@ -36,16 +44,15 @@ brew uninstall --cask --zap dm-annotate
 brew uninstall --cask --zap dm-lessonmeld
 ```
 
-## Developer Preview Gatekeeper Step
+## Gatekeeper Status
 
-Current release downloads are ad-hoc signed and not notarized. macOS Gatekeeper may block them with an "Apple could not verify" dialog until Developer ID signing is configured.
+Current `dm-annotate` release downloads are Developer ID signed, notarized, and stapled.
 
-After Homebrew installs the app, run this if macOS blocks first launch:
+`dm-lessonmeld` release downloads may still be ad-hoc signed. macOS Gatekeeper can block ad-hoc builds with an "Apple could not verify" dialog.
+
+After Homebrew installs an ad-hoc build, run this only if macOS blocks first launch:
 
 ```sh
-xattr -dr com.apple.quarantine "/Applications/Digital Meld Annotate.app"
-open "/Applications/Digital Meld Annotate.app"
-
 xattr -dr com.apple.quarantine "/Applications/Digital Meld LessonMeld.app"
 open "/Applications/Digital Meld LessonMeld.app"
 ```
@@ -74,8 +81,8 @@ rm -rf "${tmpdir}"
 
 ```sh
 export HOMEBREW_GITHUB_API_TOKEN="$(gh auth token)"
-brew audit --cask --strict --online dm-annotate
-brew install --cask --dry-run dm-annotate
-brew audit --cask --strict --online dm-lessonmeld
-brew install --cask --dry-run dm-lessonmeld
+brew audit --cask --strict --online bradgroux/tap/dm-annotate
+brew install --cask --dry-run bradgroux/tap/dm-annotate
+brew audit --cask --strict --online bradgroux/tap/dm-lessonmeld
+brew install --cask --dry-run bradgroux/tap/dm-lessonmeld
 ```
