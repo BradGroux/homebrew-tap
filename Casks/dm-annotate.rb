@@ -1,6 +1,6 @@
 cask "dm-annotate" do
-  version "0.1.11"
-  sha256 "4553d332b3d011071c41e1728c5cdd69d943f8507fcb81e2593749b74791d8bf"
+  version "0.1.12"
+  sha256 "91e2f8b03f8950694bf72d4cf9b3c6988332446e4c5ab39b6677050f358ca7b4"
 
   url "https://github.com/BradGroux/dm-annotate/releases/download/v#{version}/dm-annotate-#{version}-macos.zip"
   name "Digital Meld Annotate"
