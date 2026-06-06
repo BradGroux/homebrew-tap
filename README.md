@@ -4,6 +4,15 @@ Homebrew tap for Digital Meld and BradGroux macOS tools.
 
 ## Install
 
+### Veritas Kanban
+
+```sh
+brew tap BradGroux/tap
+brew install --cask veritas-kanban
+```
+
+Veritas Kanban is a local-first task management and AI agent orchestration workspace.
+
 ### dm-annotate
 
 ```sh
@@ -33,6 +42,7 @@ brew install --cask dm-lessonmeld
 ## Uninstall
 
 ```sh
+brew uninstall --cask veritas-kanban
 brew uninstall --cask dm-annotate
 brew uninstall --cask dm-lessonmeld
 ```
@@ -40,13 +50,14 @@ brew uninstall --cask dm-lessonmeld
 Remove app preferences too:
 
 ```sh
+brew uninstall --cask --zap veritas-kanban
 brew uninstall --cask --zap dm-annotate
 brew uninstall --cask --zap dm-lessonmeld
 ```
 
 ## Gatekeeper Status
 
-Current `dm-annotate` release downloads are Developer ID signed, notarized, and stapled.
+Current `veritas-kanban` and `dm-annotate` release downloads are Developer ID signed, notarized, and stapled.
 
 `dm-lessonmeld` release downloads may still be ad-hoc signed. macOS Gatekeeper can block ad-hoc builds with an "Apple could not verify" dialog.
 
@@ -85,4 +96,6 @@ brew audit --cask --strict --online bradgroux/tap/dm-annotate
 brew install --cask --dry-run bradgroux/tap/dm-annotate
 brew audit --cask --strict --online bradgroux/tap/dm-lessonmeld
 brew install --cask --dry-run bradgroux/tap/dm-lessonmeld
+brew audit --cask --strict --online bradgroux/tap/veritas-kanban
+brew install --cask --dry-run bradgroux/tap/veritas-kanban
 ```
