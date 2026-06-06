@@ -2,8 +2,7 @@ cask "veritas-kanban" do
   version "5.0.0"
   sha256 "ea492c71c3276de8c44c15e1ccb51fc7d713b5b4f8b8c9f302c0f5dd54e14c32"
 
-  url "https://github.com/BradGroux/veritas-kanban/releases/download/v#{version}/Veritas-Kanban-#{version}-mac-arm64.zip",
-      verified: "github.com/BradGroux/veritas-kanban/"
+  url "https://github.com/BradGroux/veritas-kanban/releases/download/v#{version}/Veritas-Kanban-#{version}-mac-arm64.zip"
   name "Veritas Kanban"
   desc "Local-first task management and AI agent orchestration"
   homepage "https://github.com/BradGroux/veritas-kanban"
@@ -14,7 +13,7 @@ cask "veritas-kanban" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: :ventura
+  depends_on macos: :monterey
 
   app "Veritas Kanban.app"
 
