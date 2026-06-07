@@ -1,6 +1,6 @@
 cask "veritas-kanban" do
   version "5.0.0"
-  sha256 "dec9bd9caa07732749fdc24bd8a0952cf3c5c52058793ec0804baffba2431ad2"
+  sha256 "bfd1e57fc99b4468f9fd97418c2aa57b51a1e3087966539c60a75c848c595cb1"
 
   url "https://github.com/BradGroux/veritas-kanban/releases/download/v#{version}/Veritas-Kanban-#{version}-mac-arm64.zip"
   name "Veritas Kanban"
