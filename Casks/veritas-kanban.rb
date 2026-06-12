@@ -1,6 +1,6 @@
 cask "veritas-kanban" do
-  version "5.0.0"
-  sha256 "bfd1e57fc99b4468f9fd97418c2aa57b51a1e3087966539c60a75c848c595cb1"
+  version "5.0.1"
+  sha256 "5501e46377fe9c3e00fdca99f65e2f10ff31a94bcdee5cfaedb8b23a9a1f9fd2"
 
   url "https://github.com/BradGroux/veritas-kanban/releases/download/v#{version}/Veritas-Kanban-#{version}-mac-arm64.zip"
   name "Veritas Kanban"
@@ -15,7 +15,7 @@ cask "veritas-kanban" do
   depends_on arch: :arm64
   depends_on macos: :monterey
 
-  app "Veritas Kanban.app"
+  app "veritas-kanban.app", target: "Veritas Kanban.app"
 
   zap trash: [
     "~/Library/Application Support/@veritas-kanban",
