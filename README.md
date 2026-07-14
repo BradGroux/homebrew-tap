@@ -22,7 +22,7 @@ brew install --cask dm-annotate
 
 `dm-annotate` / Digital Meld Annotate is a native, local-only macOS screen annotation tool.
 
-The current v0.1.12 release is Apple silicon only. The cask enforces that requirement so Intel Macs cannot install an incompatible artifact. The restriction will be removed with the next universal release.
+Release v0.1.13 and later include a universal executable for Apple silicon and Intel Macs.
 
 If Homebrew reports that `dm-annotate` exists in multiple taps, remove the retired app-repo tap:
 
