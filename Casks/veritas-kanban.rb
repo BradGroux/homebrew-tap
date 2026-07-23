@@ -21,4 +21,18 @@ cask "veritas-kanban" do
     "~/Library/Application Support/@veritas-kanban",
     "~/Library/Preferences/io.digitalmeld.veritas-kanban.plist",
   ]
+
+  caveats <<~EOS
+    Homebrew installs or replaces the app but does not launch it or wait for its
+    bundled server. Start Veritas Kanban with:
+      open -a "Veritas Kanban"
+
+    macOS can return from that command before port 3001 is ready. Use the
+    bounded exact-version and packaged-listener check in the upgrade guide
+    instead of one immediate curl:
+      https://github.com/BradGroux/veritas-kanban/blob/main/docs/V5-UPGRADE-INSTALL-ADMIN-GUIDE.md#routine-mac-desktop-upgrade
+
+    For web/source-to-desktop migration and competing-server cleanup:
+      https://github.com/BradGroux/veritas-kanban/blob/main/docs/WEB-TO-MAC-DESKTOP-MIGRATION.md
+  EOS
 end
