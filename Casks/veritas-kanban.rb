@@ -17,6 +17,11 @@ cask "veritas-kanban" do
 
   app "veritas-kanban.app", target: "Veritas Kanban.app"
 
+  zap trash: [
+    "~/Library/Application Support/@veritas-kanban",
+    "~/Library/Preferences/io.digitalmeld.veritas-kanban.plist",
+  ]
+
   caveats <<~EOS
     Homebrew installs or replaces the app but does not launch it or wait for its
     bundled server. Start Veritas Kanban with:
@@ -30,9 +35,4 @@ cask "veritas-kanban" do
     For web/source-to-desktop migration and competing-server cleanup:
       https://github.com/BradGroux/veritas-kanban/blob/main/docs/WEB-TO-MAC-DESKTOP-MIGRATION.md
   EOS
-
-  zap trash: [
-    "~/Library/Application Support/@veritas-kanban",
-    "~/Library/Preferences/io.digitalmeld.veritas-kanban.plist",
-  ]
 end
