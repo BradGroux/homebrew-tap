@@ -28,8 +28,8 @@ cask "veritas-kanban" do
       open -a "Veritas Kanban"
 
     macOS can return from that command before port 3001 is ready. Use the
-    bounded, exact-version readiness check in the upgrade guide instead of one
-    immediate curl:
+    bounded exact-version and packaged-listener check in the upgrade guide
+    instead of one immediate curl:
       https://github.com/BradGroux/veritas-kanban/blob/main/docs/V5-UPGRADE-INSTALL-ADMIN-GUIDE.md#routine-mac-desktop-upgrade
 
     For web/source-to-desktop migration and competing-server cleanup:
