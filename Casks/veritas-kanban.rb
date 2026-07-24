@@ -1,6 +1,6 @@
 cask "veritas-kanban" do
-  version "5.2.5"
-  sha256 "3f1816de7ae46d5e0541209f8acd65ffa32a47bd5caeedd9546358557e66fced"
+  version "6.0.0"
+  sha256 "7a5947bb6abd440c4d69da36def9f891e154139547f741d2f44c4733c6719cb8"
 
   url "https://github.com/BradGroux/veritas-kanban/releases/download/v#{version}/Veritas-Kanban-#{version}-mac-arm64.zip"
   name "Veritas Kanban"
@@ -30,7 +30,7 @@ cask "veritas-kanban" do
     macOS can return from that command before port 3001 is ready. Use the
     bounded exact-version and packaged-listener check in the upgrade guide
     instead of one immediate curl:
-      https://github.com/BradGroux/veritas-kanban/blob/main/docs/V5-UPGRADE-INSTALL-ADMIN-GUIDE.md#routine-mac-desktop-upgrade
+      https://github.com/BradGroux/veritas-kanban/blob/main/docs/V6-UPGRADE-INSTALL-ADMIN-GUIDE.md#routine-mac-desktop-upgrade
 
     For web/source-to-desktop migration and competing-server cleanup:
       https://github.com/BradGroux/veritas-kanban/blob/main/docs/WEB-TO-MAC-DESKTOP-MIGRATION.md
